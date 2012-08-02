@@ -26,6 +26,7 @@ gem 'jquery-rails',  '2.0.0'
 
 group :test do
    gem 'capybara',   '1.1.2'
+   gem 'cucumber-rails'
 end
 
 # group :production do
