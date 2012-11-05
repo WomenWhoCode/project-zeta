@@ -9,7 +9,7 @@ describe "StaticPages" do
 
       it { should have_selector('title', text: full_title('WomenWhoCode')) }
       
-      it { should have_selector('h1', text: 'Hello Ruby Tuesday!') }
+      it { should have_selector('h1', text: 'Hello Ruby Tuesdays!') }
 
       it { should have_content('by Women Who Code') }
 

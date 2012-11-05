@@ -1,7 +1,10 @@
 <% provide(:title, 'WomenWhoCode') %>
 
-<h1>Hello Ruby Tuesday!</h1>
-<h2><%= link_to "Sign up", signup_path %></h2>
+<h1>Hello Ruby Tuesdays!</h1>
 <p>by Women Who Code</p>
 
-
+<p>
+  <% if !signed_in? %>
+    <%= link_to "Sign up", signup_path, class: "btn btn-large btn-primary" %>
+  <% end %>
+</p>

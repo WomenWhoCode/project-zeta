@@ -15,6 +15,8 @@ Dani
 Rails 3.2.7
 Ruby 1.9.3p194
 
+Note for windows users: we now use twitter bootstrap, which has known issues with windows.  If you find a fix or workaround that allows you to develop with it on windows, please update this page.
+
 == Interesting info
 === Console
 
