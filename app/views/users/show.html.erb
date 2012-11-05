@@ -1,10 +1,7 @@
 <% provide(:title, @user.name) %>
 
 <h1><%= @user.name %></h1>
+
+
 Email: <%= @user.email %>
-
-
-
-<% if signed_in? %>
-  <%= link_to "Sign out", signout_path, method: "delete" %>
-<% end %>
+<rb/>
