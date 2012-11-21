@@ -16,8 +16,31 @@ class UsersController < ApplicationController
   end
 
   def show
-#        flash[:success] = "Welcome to Hello Ruby Tuesdays!"
   	@user = User.find(params[:id])
+  end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+     
+    if @user.authenticate(params[:user][:password])
+      @user.password_confirmation = params[:user][:password]
+    else
+      flash.now[:error] = "Invalid password"
+      render 'edit'
+      return
+    end
+    
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Successfully updated!"
+      sign_in @user
+      redirect_to @user
+    else
+      render 'edit'
+    end    
   end
 
 end
