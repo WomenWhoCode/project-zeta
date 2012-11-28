@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
   
   before_save :create_remember_token
   
-  #validates :password, presence: true, length: { minimum: 6 }
-  #validates :password_confirmation, presence: true
+  validates :password, presence: true, length: { minimum: 6 }
+  validates :password_confirmation, presence: true
   
   private
     def create_remember_token

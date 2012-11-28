@@ -15,5 +15,4 @@ describe "StaticPages" do
 
    end
 
-
 end
