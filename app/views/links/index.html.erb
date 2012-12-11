@@ -1,0 +1,13 @@
+<% provide(:title, "Links") %>
+<h1>All Links</h1>
+
+<p>
+   <%= link_to "Add new link!", new_link_path, class: "btn btn-medium btn-primary" %>
+</p>
+
+<% @links.each do |link| %>
+<h4><%= link_to link.title, "https://".concat(link.url) %></h4>
+<p>
+  <%= link.description %>
+</p>
+<% end %>

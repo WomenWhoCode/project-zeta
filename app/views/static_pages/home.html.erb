@@ -6,5 +6,7 @@
 <p>
   <% if !user_signed_in? %>
     <%= link_to "Sign up", signup_path, class: "btn btn-large btn-primary" %>
+  <% else %>
+    <%= link_to "See all links", links_path %>
   <% end %>
 </p>
