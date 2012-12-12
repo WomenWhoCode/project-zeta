@@ -6,7 +6,7 @@
 </p>
 
 <% @links.each do |link| %>
-<h4><%= link_to link.title, "https://".concat(link.url) %></h4>
+<h4><%= link_to link.title, link.url %></h4>
 <p>
   <%= link.description %>
 </p>
