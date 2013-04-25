@@ -11,8 +11,6 @@ HelloRubyTuesday::Application.routes.draw do
     end
   end
   resources :links
-  
- 
  
   root :to => 'static_pages#home'
   
