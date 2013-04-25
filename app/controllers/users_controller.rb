@@ -2,12 +2,10 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @obj = @user
   end
 
   def create
     @user = User.new(params[:user])
-    
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to Hello Ruby Tuesdays!"
@@ -23,7 +21,6 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
-    @obj = @user
     unless @user == current_user
       flash[:error] = "Cannot edit other users"
       redirect_to @user
@@ -32,7 +29,6 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    @obj = @user
     if @user.update_attributes(params[:user])
       flash[:success] = "Successfully updated!"
       sign_in @user
@@ -40,6 +36,10 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end    
+  end
+  
+  def links_index
+    @links = current_user.links
   end
 
 end

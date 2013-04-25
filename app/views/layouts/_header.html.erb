@@ -1,9 +1,9 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "sample app", root_path, id: "logo" %>
+      <%= link_to "Hello Ruby Tuesday!", root_path, id: "logo" %>
       <nav>
-        <ul class="nav pull-right">
+        <ul class="nav pull-right" id="header_nav">
           <li><%= link_to "Home", root_path %></li>
           <% if user_signed_in? %>
             <li><%= link_to "Links",  links_path %></li>

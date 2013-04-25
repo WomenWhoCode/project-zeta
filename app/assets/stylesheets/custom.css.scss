@@ -23,3 +23,34 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+div.container {
+	margin: 0 10px;
+}
+
+th {
+	text-align: left;
+}
+
+th, td {
+	padding: 0 10px;
+}
+
+#logo {
+	font-size: 1.7em;
+	font-weight: bold;
+	float: left;
+	margin: 15px 10px;
+	color: white;
+	&:hover {
+		color: white;
+		text-decoration: none;
+		text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.44);
+		text-shadow: 4px 4px 2px #d1d1d1;
+        filter: dropshadow(color=#d1d1d1, offx=4, offy=4);
+	}
+}
+
+#header_nav {
+	margin-top: 15px;
+}

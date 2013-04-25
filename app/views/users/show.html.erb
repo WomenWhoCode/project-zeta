@@ -1,6 +1,9 @@
 <% provide(:title, @user.name) %>
 
-<h1><%= @user.name %></h1>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
 
 <p>
 Email: <%= @user.email %>
@@ -8,4 +11,8 @@ Email: <%= @user.email %>
 
 <p>
 About Me: <%= @user.about_text %>
+</p>
+
+<p>
+	<%= link_to "My Links", links_index_user_path(current_user) %>
 </p>

@@ -7,13 +7,17 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
-                  :name, :phone, :about_text
+                  :name, :phone, :about_text, :links
   
   before_save :create_remember_token
+  
+  has_many :links
   
   # add to devise stuff?
   #validates :password, presence: true, length: { minimum: 6 }
   #validates :password_confirmation, presence: true
+  
+  validates :name, presence: true
   
   private
     def create_remember_token

@@ -11,13 +11,13 @@
 <body>
    <%= render 'layouts/header' %>
    <div class="container">
-   <% flash.each do |key, value| %>
-       <div class ="alert-<%= key %>"><%= value %></div>
-   <% end %>
+ 	   <% flash.each do |key, value| %>
+	       <div class ="alert-<%= key %>"><%= value %></div>
+	   <% end %>
 
-   <%= yield %>
-   <%= debug(params) if Rails.env.development? %>
-   <!-- TODO figure out how to pass in the current user to the debug printout -->
+	   <%= yield %>
+	   <%= debug(params) if Rails.env.development? %>
+	   <!-- TODO figure out how to pass in the current user to the debug printout -->
    </div>
 </body>
 </html>

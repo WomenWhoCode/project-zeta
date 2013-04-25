@@ -29,6 +29,7 @@ group :assets do
 end
 
 group :test do
+  gem 'database_cleaner'
   gem 'capybara',   '1.1.2'
   gem 'cucumber-rails'
   gem 'factory_girl_rails', '1.4.0'

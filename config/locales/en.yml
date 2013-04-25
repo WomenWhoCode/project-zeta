@@ -7,3 +7,6 @@ en:
     attributes:
       link:
         url: "URL"
+      
+      user:
+        about_text: "About me"
