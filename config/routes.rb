@@ -15,9 +15,10 @@ HelloRubyTuesday::Application.routes.draw do
   root :to => 'static_pages#home'
   
   as :user do
-    get '/signup' => 'users#new'
+    get '/signup' => 'devise/registrations#new'
     get '/signin' => 'devise/sessions#new'
     get '/signout' => 'devise/sessions#destroy'
+    get '/users/edit' => 'devise/registrations#edit'
   end
 
 end
