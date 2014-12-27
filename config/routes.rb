@@ -8,9 +8,11 @@ HelloRubyTuesday::Application.routes.draw do
   resources :users do
     member do
       get 'links_index'
+			get 'events_index'
     end
   end
   resources :links
+	resources :events
  
   root to: 'static_pages#home'
   

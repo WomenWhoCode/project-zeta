@@ -14,5 +14,9 @@ About Me: <%= @user.about_text %>
 </p>
 
 <p>
-	<%= link_to "My Links", links_index_user_path(current_user) %>
+	<%= link_to 'My Links', links_index_user_path(current_user) %>
+</p>
+
+<p>
+	<%= link_to 'My Events', events_index_user_path(current_user) %>
 </p>
