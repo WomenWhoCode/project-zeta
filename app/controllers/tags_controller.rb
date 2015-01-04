@@ -1,6 +1,9 @@
 class TagsController < ApplicationController
-  def show
-    @links = Link.tagged_with(params[:tag])
-		@events = Event.tagged_with(params[:tag])
+	include TagsHelper
+
+	def show
+		tagged_objs = all_obj_with_tag(params[:tag])
+		@links = tagged_objs[:links]
+		@events = tagged_objs[:events]
   end
 end
