@@ -1,4 +1,8 @@
 <% provide(:title, "Tagged With #{params[:tag]}") %>
 <h1>Tagged With <%= params[:tag] %></h1>
 
+<h2>Links</h2>
 <%= render :partial => 'links/table' %>
+
+<h2>Events</h2>
+<%= render :partial => 'events/table' %>

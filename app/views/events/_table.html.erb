@@ -1,0 +1,17 @@
+<p>
+   <%= link_to "Add new event!", new_event_path, class: 'btn btn-primary', role: 'button' %>
+</p>
+<table>
+	<% @events.each do |event| %>
+		<tr>	
+			<th><%= event.title %></th>
+  		    <td><%= event.description %></td>
+			<td><%= event.username %></td>
+			<% if event.editable_by?(current_user) %>
+				<td><%= link_to "Edit Event", edit_event_path(event) %></td>
+				<td><%= link_to "Delete Event", event_path(event), :method => :delete %></td>
+			<% end %>
+            <td><%= raw event.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
+		</tr>
+	<% end %>
+</table>

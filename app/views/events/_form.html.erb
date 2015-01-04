@@ -1,0 +1,22 @@
+<%= form_for(@event) do |f| %>
+  <%= render 'shared/error_messages', :obj => @event %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br/>
+  <%= f.label :description %>
+  <%= f.text_area :description, rows: '2' %>
+  <br/>
+  <%= f.label :start_time %>
+  <%= f.datetime_select :start_time %>
+  <br/>
+  <%= f.label :duration %>
+  <%= f.text_field :duration %>
+  <br/>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br/>
+  <%= f.label :tag_list %>
+  <%= f.text_field :tag_list %>
+  <br/>
+  <%= f.submit 'Add event!', class: 'btn btn-lg btn-primary', role: 'button' %>
+<% end %>

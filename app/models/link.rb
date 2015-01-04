@@ -4,6 +4,7 @@ class Link < ActiveRecord::Base
   validates :title, presence: true
   
   belongs_to :user
+	belongs_to :event
   
   before_save :maybe_add_protocol
 
