@@ -4,7 +4,7 @@ ruby '2.0.0'
 gem 'rails',      '4.0.2'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
-gem 'bootstrap-sass', '3.0.3.0'
+gem 'bitters', '~> 0.10.1'
 
 gem 'devise'
 gem 'omniauth-github'
