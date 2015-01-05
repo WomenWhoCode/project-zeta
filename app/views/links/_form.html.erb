@@ -1,16 +1,16 @@
 <%= form_for(@link) do |f| %>
   <%= render 'shared/error_messages', :obj => @link %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: 'form-control' %>
   <br/>
   <%= f.label :url %>
-  <%= f.text_field :url %>
+  <%= f.text_field :url, class: 'form-control' %>
   <br/>
   <%= f.label :description %>
-  <%= f.text_area :description, rows: '2' %>
+  <%= f.text_area :description, rows: '2', class: 'form-control' %>
   <br/>
   <%= f.label :tag_list %>
-  <%= f.text_field :tag_list %>
+  <%= f.text_field :tag_list, class: 'form-control' %>
   <br/>
   <%= f.submit "Add link!", class: "btn btn-lg btn-primary", role: 'button' %>
 <% end %>

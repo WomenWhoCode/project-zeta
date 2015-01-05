@@ -1,7 +1,7 @@
 <!-- if using, controller must assign the appropriate thing to @obj -->
 <% if obj.errors.any? %>
   <div id="error_explanation">
-    <div class="alert alert-error">
+    <div class="alert alert-danger">
       The form contains <%= pluralize(obj.errors.count, "error") %>.
     </div>
     <ul>

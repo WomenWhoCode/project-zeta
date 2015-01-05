@@ -5,22 +5,22 @@
     <%= devise_error_messages! %>
 
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
 
     <%= f.label :about_text, "Your Story" %>
-    <%= f.text_area :about_text %>
+    <%= f.text_area :about_text, class: 'form-control' %>
 
     <div><%= f.label :email %><br />
-      <%= f.email_field :email %></div>
+      <%= f.email_field :email, class: 'form-control' %></div>
     <% if resource.uid.nil? %>
         <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-          <%= f.password_field :password, :autocomplete => "off" %></div>
+          <%= f.password_field :password, :autocomplete => 'off', class: 'form-control' %></div>
 
         <div><%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation %></div>
+          <%= f.password_field :password_confirmation, class: 'form-control' %></div>
 
         <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-          <%= f.password_field :current_password %></div>
+          <%= f.password_field :current_password, class: 'form-control' %></div>
     <% else %>
         You're authenticated through <%= @user.provider.capitalize %>!
     <% end %>
