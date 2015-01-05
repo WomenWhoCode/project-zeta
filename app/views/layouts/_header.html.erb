@@ -1,26 +1,71 @@
-<header>
-  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-    <%= link_to "Hello Ruby Tuesdays!", root_path, class: "navbar-brand", id: "logo" %>
-    <ul class="nav navbar-nav navbar-right" id="header_nav">
-      <li><%= link_to "Home", root_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to 'Events', events_path %></li>
-        <li><%= link_to "Links",  links_path %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Profile", current_user %></li>
-            <li><%= link_to "Settings", '#' %></li>
-            <li><%= link_to "Edit Profile", users_edit_path %></li>
-            <li class="divider"></li>
-            <li>
-              <%= link_to "Sign out", signout_path %>
-            </li>
-          </ul>
-        </li>
-      <% else %>
-        <li><%= link_to "Sign in", signin_path %></li>
-      <% end %>
-    </ul>
-  </nav>
+<header class="navigation">
+  <div class="navigation-wrapper">
+    <%= link_to "Hello Ruby Tuesdays!", root_path, class: "logo", id: "logo" %>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <div class="nav">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><%= link_to "Home", root_path %></li>
+        <% if user_signed_in? %>
+          <li class="nav-link"><%= link_to 'Events', events_path %></li>
+          <li class="nav-link"><%= link_to "Links",  links_path %></li>
+          <li class="nav-link more"><a href="#">Account</a>
+            <ul class="submenu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", '#' %></li>
+              <li><%= link_to "Edit Profile", users_edit_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Sign out", signout_path %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-link"><%= link_to "Sign in", signin_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </header>
+
+<!--<header class="navigation">-->
+  <!--<div class="navigation-wrapper">-->
+    <!--<a href="javascript:void(0)" class="logo">-->
+      <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">-->
+    <!--</a>-->
+    <!--<a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>-->
+    <!--<div class="nav">-->
+      <!--<ul id="js-navigation-menu" class="navigation-menu show">-->
+        <!--<li class="nav-link"><a href="javascript:void(0)">Products</a></li>-->
+        <!--<li class="nav-link"><a href="javascript:void(0)">About Us</a></li>-->
+        <!--<li class="nav-link"><a href="javascript:void(0)">Contact</a></li>-->
+        <!--<li class="nav-link more"><a href="javascript:void(0)">More</a>-->
+          <!--<ul class="submenu">-->
+            <!--<li><a href="javascript:void(0)">Submenu Item</a></li>-->
+            <!--<li><a href="javascript:void(0)">Another Item</a></li>-->
+            <!--<li class="more"><a href="javascript:void(0)">Item with submenu</a>-->
+              <!--<ul class="submenu">-->
+                <!--<li><a href="javascript:void(0)">Sub-submenu Item</a></li>-->
+                <!--<li><a href="javascript:void(0)">Another Item</a></li>-->
+              <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="more"><a href="javascript:void(0)">Another submenu</a>-->
+              <!--<ul class="submenu">-->
+                <!--<li><a href="javascript:void(0)">Sub-submenu</a></li>-->
+                <!--<li><a href="javascript:void(0)">An Item</a></li>-->
+              <!--</ul>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <!--<div class="navigation-tools">-->
+      <!--<div class="search-bar">-->
+        <!--<div class="search-and-submit">-->
+          <!--<input type="search" placeholder="Enter Search" />-->
+          <!--<button type="submit">-->
+            <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">-->
+          <!--</button>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<a href="javascript:void(0)" class="sign-up">Sign Up</a>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</header>-->

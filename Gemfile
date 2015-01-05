@@ -10,7 +10,7 @@ gem 'neat', '~> 1.7.1'
 gem 'devise'
 gem 'omniauth-github'
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '~> 3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
