@@ -3,9 +3,7 @@ html {
 }
 
 body {
-  padding-top: 54px;
-  font-size: 13px;
-  line-height: 18px;
+  margin: 0px;
 }
 
 section {
@@ -49,10 +47,9 @@ th, td {
 }
 
 #logo {
-	font-size: 1.7em;
+	font-size: 1.5em;
 	font-weight: bold;
-	float: left;
-	margin: 0px 10px;
+	margin: 5px 10px;
 	color: white;
 	&:hover {
 		color: white;
@@ -95,7 +92,7 @@ header.navigation {
 
   .navigation-wrapper {
     @include clearfix;
-    @include outer-container;
+    @include outer-container(100%);
     position: relative;
     z-index: 9999;
   }
@@ -117,7 +114,7 @@ header.navigation {
   .navigation-menu-button {
     color: $navigation-color;
     display: block;
-    float: left;
+    float: right;
     font-family: $sans-serif;
     font-weight: 700;
     line-height: $navigation-height;
@@ -142,7 +139,7 @@ header.navigation {
     min-height: $navigation-height;
 
     @include media ($horizontal-bar-mode) {
-      float: left;
+      float: right;
     }
   }
 
@@ -317,92 +314,6 @@ header.navigation {
           text-align: left;
           width: $navigation-submenu-width;
         }
-      }
-    }
-  }
-
-  // Elements on the far right
-
-  .navigation-tools {
-    height: $navigation-height;
-    display: block;
-    padding-right: $navigation-padding;
-    padding-left: $navigation-padding/2;
-    clear: both;
-    background: #505050;
-
-    @include media($large-screen) {
-      background: transparent;
-      float: right;
-      clear: none;
-    }
-  }
-
-  .sign-up {
-    @extend button;
-    margin-top: 1.1em;
-    float: right;
-    display: inline;
-    font-size: .8em;
-    text-transform: uppercase;
-    padding: .75em 1em;
-  }
-
-  // Search bar
-
-  .search-bar {
-    $search-bar-border-color: $base-border-color;
-    $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10);
-
-    padding: .85em .6em .7em .6em;
-    width: 60%;
-    float: left;
-
-    .search-and-submit {
-      position: relative;
-
-      input[type=search] {
-        background: $navigation-search-background;
-        border: $navigation-search-border;
-        padding: .5em .8em;
-        font-size: .9em;
-        font-style: italic;
-        color: $navigation-color;
-        border-radius: $base-border-radius * 2;
-        margin: 0;
-
-        @include media($large-screen) {
-          width: 100%;
-        }
-      }
-
-      button[type=submit] {
-        @include button(flat, $navigation-search-background);
-        position: absolute;
-        top: 0.3em;
-        right: 0.3em;
-        bottom: 0.3em;
-        left: auto;
-        outline: none;
-        padding: 0 9px;
-
-        img {
-          height: 12px;
-          opacity: .7;
-          padding: 1px;
-        }
-      }
-    }
-
-    @include media($horizontal-bar-mode) {
-      width: 16em;
-      position: relative;
-      display: inline-block;
-
-      input {
-        @include box-sizing(border-box);
-        display: block;
       }
     }
   }
