@@ -8,3 +8,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// for tag cloud
+.tag-sm, .tag-med, .tag-lg {
+  @extend %button;
+}
