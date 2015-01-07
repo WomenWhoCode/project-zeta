@@ -12,7 +12,7 @@
 <% else %>
     <div id="tag_cloud">
       Tags!  Check out what we're posting:<br/>
-      <% tag_cloud all_tag_counts, ['btn-xs', 'btn-sm', '', 'btn-lg'] do |tag, css_class| %>
+      <% tag_cloud tag_counts_combined, ['btn-xs', 'btn-sm', '', 'btn-lg'] do |tag, css_class| %>
           <%= link_to tag.name, tag_path(tag.name), class: "btn btn-info #{css_class}", role: 'button'%>
       <% end %>
 </div>
