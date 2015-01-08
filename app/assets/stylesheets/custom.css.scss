@@ -22,7 +22,8 @@ a:hover {
   text-decoration: underline;
 }
 
-a.btn-primary {
+a.btn {
+  @extend %button;
   color: white;
 }
 
@@ -35,7 +36,7 @@ a.btn-primary {
 }
 
 div.container {
-	margin: 0 10px;
+	margin: 10px;
 }
 
 th {
@@ -47,8 +48,28 @@ th, td {
 }
 
 .gravatar {
-  max-height: 45%;
+  max-width: 10%;
+  vertical-align: middle;
+  height: auto;
+  margin: 10px 0px
 }
+
+.alert-error {
+  @extend %flash-error;
+}
+
+.alert-alert {
+  @extend %flash-alert;
+}
+
+.alert-notice {
+  @extend %flash-notice;
+}
+
+.alert-success {
+  @extend %flash-success;
+}
+
 
 .debug_dump {
   border: $base-border;

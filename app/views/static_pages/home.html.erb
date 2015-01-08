@@ -1,22 +1,22 @@
 <% provide(:title, 'WomenWhoCode') %>
 <% flash.each do |key, value| %>
-    <div class ="alert alert-<%= flash_to_bootstrap(key) %>"><%= value %></div>
+  <div class ="alert-<%= key%>"><%= value %></div>
 <% end %>
 <h1>Hello Ruby Tuesdays!</h1>
 <p>by Women Who Code</p>
 
 <% if not user_signed_in? %>
-    <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Sign up", signup_path, class: "btn" %>
 
-    <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
+  <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
 <% else %>
-    <div id="tag_cloud">
-      Tags!  Check out what we're posting:<br/>
-      <% tag_cloud tag_counts_combined, ['tag-sm', 'tag-med', 'tag-lg'] do |tag, css_class| %>
-          <%= link_to tag.name, tag_path(tag.name), class: "#{css_class}", role: 'button'%>
-      <% end %>
-</div>
-<%= link_to 'See all links', links_path %>
+  <div id="tag_cloud">
+    Tags!  Check out what we're posting:<br/>
+    <% tag_cloud tag_counts_combined, ['tag-sm', 'tag-med', 'tag-lg'] do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: "#{css_class}", role: 'button'%>
+    <% end %>
+  </div>
+  <%= link_to 'See all links', links_path %>
   <br/>
-<%= link_to 'See all events', events_path %>
+  <%= link_to 'See all events', events_path %>
 <% end %>

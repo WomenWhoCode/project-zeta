@@ -5,7 +5,7 @@ module DeviseHelper
     messages = flash.map{ |key, value| content_tag(:li, value)}.join if resource.errors.empty?
     messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join if flash.empty?
     html = <<-HTML
-     <div class="alert alert-danger">
+     <div class="alert-error">
        #{messages}
      </div>
     HTML
