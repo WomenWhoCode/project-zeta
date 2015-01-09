@@ -1,15 +1,16 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails',      '4.0.2'
+gem 'rails',      '4.1'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '3.0.1'
-gem 'bootstrap-sass', '3.0.3.0'
+gem 'bitters', '~> 0.10.1'
+gem 'neat', '~> 1.7.1'
 
 gem 'devise'
 gem 'omniauth-github'
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '~> 3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -21,8 +22,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 # assets
-  gem 'sass-rails',     '~> 4.0.1'
-  gem 'coffee-rails',   '~> 4.0.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

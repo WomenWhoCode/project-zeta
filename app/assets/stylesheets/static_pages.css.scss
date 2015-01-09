@@ -8,3 +8,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// for tag cloud
+.tag-sm, .tag-med, .tag-lg {
+  @extend %button;
+}
+
+.tag-sm {
+  font-size: .75em;
+}
+
+.tag-lg {
+  font-size: 1.25em;
+  margin: 3px;
+}

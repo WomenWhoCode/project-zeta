@@ -1,13 +1,9 @@
-@import "bootstrap";
-
 html {
   overflow-y: scroll;
 }
 
 body {
-  padding-top: 54px;
-  font-size: 13px;
-  line-height: 18px;
+  margin: 0px;
 }
 
 section {
@@ -26,7 +22,8 @@ a:hover {
   text-decoration: underline;
 }
 
-a.btn-primary {
+a.btn {
+  @extend %button;
   color: white;
 }
 
@@ -39,7 +36,7 @@ a.btn-primary {
 }
 
 div.container {
-	margin: 0 10px;
+	margin: 10px;
 }
 
 th {
@@ -50,29 +47,32 @@ th, td {
 	padding: 0 10px;
 }
 
-#logo {
-	font-size: 1.7em;
-	font-weight: bold;
-	float: left;
-	margin: 0px 10px;
-	color: white;
-	&:hover {
-		color: white;
-		text-decoration: none;
-		text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.44);
-		text-shadow: 4px 4px 2px #d1d1d1;
-        filter: dropshadow(color=#d1d1d1, offx=4, offy=4);
-	}
-}
-
-#header_nav {
-    margin-right: 15px;
-}
-
-.navbar {
-  height: 50px;
-}
-
 .gravatar {
-  max-height: 45%;
+  max-width: 10%;
+  vertical-align: middle;
+  height: auto;
+  margin: 10px 0px
 }
+
+.alert-error {
+  @extend %flash-error;
+}
+
+.alert-alert {
+  @extend %flash-alert;
+}
+
+.alert-notice {
+  @extend %flash-notice;
+}
+
+.alert-success {
+  @extend %flash-success;
+}
+
+
+.debug_dump {
+  border: $base-border;
+  padding-left: 5px;
+}
+

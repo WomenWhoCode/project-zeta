@@ -41,6 +41,7 @@ module TagsHelper
 		tag_join = tags.join(tagging_subselect)
 				.on(taggings[:tag_id].eq(tags[:id]))
 				.project(tags[:id].as('id'), tags[:name].as('name'), taggings[:tags_count].as('count'))
+				.order(tags[:name])
 
 		# if there's a better way to do this Arel::SelectManager -> ActiveRecord thing, I'm dying to hear it
 		Tag.find_by_sql(tag_join.to_sql)
