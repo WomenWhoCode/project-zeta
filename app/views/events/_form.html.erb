@@ -18,5 +18,6 @@
   <%= f.label :tag_list %>
   <%= f.text_field :tag_list %>
   <br/>
-  <%= f.submit 'Add event!', class: 'btn', role: 'button' %>
+  <%= f.submit (@event.new_record? ? 'Add event!' : 'Update event'), class: 'btn', role: 'button' %>
+  <%= link_to 'Cancel', :back %>
 <% end %>

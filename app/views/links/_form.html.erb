@@ -12,5 +12,6 @@
   <%= f.label :tag_list %>
   <%= f.text_field :tag_list %>
   <br/>
-  <%= f.submit "Add link!", class: "btn", role: 'button' %>
+  <%= f.submit (@link.new_record? ? 'Add link!' : 'Update link'), class: 'btn', role: 'button' %>
+  <%= link_to 'Cancel', :back %>
 <% end %>

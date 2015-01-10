@@ -8,14 +8,15 @@
 
     <%= f.label :email %>  <%= f.email_field :email %>
 
-    <%= f.label :about_text, "Your Story" %>
+    <%= f.label :about_text, 'Your Story' %>
     <%= f.text_area :about_text %>
 
     <%= f.label :password %>  <%= f.password_field :password %>
 
     <%= f.label :password_confirmation %>  <%= f.password_field :password_confirmation %>
 
-    <%= f.submit "Sign up!", class: "btn" %>
+    <%= f.submit 'Sign up!', class: 'btn' %>
+  <%= link_to 'Cancel', :back %>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render 'devise/shared/links' %>
