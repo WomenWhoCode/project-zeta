@@ -2,8 +2,8 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: rubytues_development
-  username: rubytues
+  database: zeta_dev
+  username: zeta
   password:
   host: localhost
   port: 5432
@@ -14,8 +14,8 @@ development:
 test: &test
   adapter: postgresql
   encoding: utf8
-  database: rubytues_test
-  username: rubytues
+  database: zeta_test
+  username: zeta
   password:
   host: localhost
   port: 5432
