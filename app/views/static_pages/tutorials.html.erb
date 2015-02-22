@@ -1,4 +1,12 @@
 <% provide(:title, 'Featured Tutorials') %>
 <h1>Tutorials!</h1>
 
-<%= render partial: 'links/table', locals: {links: @featured_tutorials } %>
+<div class="grid-items">
+  <% @featured_tutorials.each do |tutorial| %>
+      <%= link_to(tutorial.url, class: 'grid-item') do %>
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
+          <h1><%= tutorial.title %></h1>
+          <p><%= tutorial.description %></p>
+      <% end %>
+  <% end %>
+</div>
