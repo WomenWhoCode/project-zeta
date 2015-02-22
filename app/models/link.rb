@@ -10,6 +10,8 @@ class Link < ActiveRecord::Base
 
   acts_as_taggable
 
+  scope :is_featured, -> { where(featured: true) }
+
   def username
     return user.name unless user.nil?
     '[deleted]'
@@ -23,5 +25,14 @@ class Link < ActiveRecord::Base
     def maybe_add_protocol
       self.url = /^http/.match(self.url) ? self.url : "http://#{self.url}"
     end
-  
+
+
+  # schema:
+  # t.string   "title"
+  # t.text     "description"
+  # t.string   "url"
+  # t.integer  "user_id"
+  # t.datetime "created_at"
+  # t.datetime "updated_at"
+  # t.boolean  "featured",    default: false
 end

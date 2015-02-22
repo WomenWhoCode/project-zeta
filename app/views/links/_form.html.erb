@@ -12,6 +12,9 @@
   <%= f.label :tag_list %>
   <%= f.text_field :tag_list %>
   <br/>
+  <%= f.label :featured %>
+  <%= f.check_box :featured %>
+  <br/>
   <%= f.submit (@link.new_record? ? 'Add link!' : 'Update link'), class: 'btn', role: 'button' %>
   <%= link_to 'Cancel', :back %>
 <% end %>
