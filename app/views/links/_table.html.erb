@@ -2,7 +2,7 @@
    <%= link_to "Add new link!", new_link_path, class: 'btn', role: 'button' %>
 </p>
 <table>
-	<% @links.each do |link| %>
+	<% links.each do |link| %>
 		<tr>	
 			<th><%= link_to link.title, link.url, :target => "_blank" %></th>
   		    <td><%= link.description %></td>

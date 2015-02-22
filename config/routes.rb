@@ -15,6 +15,8 @@ HelloRubyTuesday::Application.routes.draw do
 	resources :events
  
   root to: 'static_pages#home'
+
+  get '/tutorials', to: 'static_pages#tutorials', as: :tutorials
   
   as :user do
     get '/signup' => 'devise/registrations#new'

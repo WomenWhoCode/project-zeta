@@ -1,8 +1,12 @@
 <% provide(:title, "Tagged With #{params[:tag]}") %>
 <h1>Tagged With <%= params[:tag] %></h1>
 
+<% if params[:tag] == 'tutorial' %>
+    <h3>See our <%= link_to 'featured tutorials!', tutorials_path %></h3>
+<% end %>
+
 <h2>Links</h2>
-<%= render :partial => 'links/table' %>
+<%= render partial: 'links/table', locals: {links: @links} %>
 
 <h2>Events</h2>
-<%= render :partial => 'events/table' %>
+<%= render partial: 'events/table' %>

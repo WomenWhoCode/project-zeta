@@ -1,4 +1,4 @@
 <% provide(:title, "My Links") %>
 <h1>My Links</h1>
 
-<%= render "links/table" %>
+<%= render partial: 'links/table', locals: {links: @links} %>
