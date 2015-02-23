@@ -14,6 +14,9 @@
               <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
               <h1><%= tutorial.title %></h1>
               <p><%= tutorial.description %></p>
+              <% tutorial.tags.reject{|tag| tag.name == 'tutorial'}.each do |tag| %>
+               <span class="badge-grid"><%= tag %></span>
+              <% end %>
             <% end %>
           <% end %>
         </div>

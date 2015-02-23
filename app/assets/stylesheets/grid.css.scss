@@ -69,6 +69,11 @@
           background-position: top;
           background-size: cover;
         }
+
+        .badge-grid {
+          @include badge(darken($background-from-list, 15%));
+          color: transparentize($grid-item-color, 0.3);
+        }
       }
     }
   }

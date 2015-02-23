@@ -22,3 +22,16 @@
 @import "tables";
 @import "lists";
 @import "buttons";
+
+$badge-font-size: 0.75em !default;
+
+@mixin badge($color: $medium-gray) {
+  background-color: $color;
+  border-radius: $badge-font-size * 5;
+  color: darken($color, 60%);
+  display: inline-block;
+  font-size: $badge-font-size;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.4em 1.2em;
+}
