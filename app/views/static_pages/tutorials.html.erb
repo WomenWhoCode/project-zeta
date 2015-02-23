@@ -1,12 +1,23 @@
 <% provide(:title, 'Featured Tutorials') %>
 <h1>Tutorials!</h1>
 
-<div class="grid-items">
-  <% @featured_tutorials.each do |tutorial| %>
-      <%= link_to(tutorial.url, class: 'grid-item') do %>
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
-          <h1><%= tutorial.title %></h1>
-          <p><%= tutorial.description %></p>
-      <% end %>
+
+<ul class="accordion-tabs-minimal">
+  <% @featured_tutorials.keys.each do |level| %>
+    <li class="tab-header-and-content">
+      <a href="#" class="tab-link"><%= level.capitalize %></a>
+      <div class="tab-content">
+        <div class="grid-items">
+          <% @featured_tutorials[level].each do |tutorial| %>
+
+            <%= link_to(tutorial.url, class: 'grid-item') do %>
+              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
+              <h1><%= tutorial.title %></h1>
+              <p><%= tutorial.description %></p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </li>
   <% end %>
-</div>
+</ul>
