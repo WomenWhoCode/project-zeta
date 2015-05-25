@@ -11,4 +11,6 @@ Dependencies: Ruby 2.0.0p257 & Rails 4.0.2
 
 And if that doesn't work let us know... 
 
-We're still working on getting planned features and bugs out of the brain-dump in pivotal tracker and into github for better visibility.  If you'd like to contribute and need something to work on, contact Georgia A (antislice).
+The backlog in Github Issues is more or less up to date. If you'd like to contribute and need something to work on, contact Georgia A (antislice).
+
+Test instance on Heroku currently based on tutorials-page branch: https://project-zeta-staging.herokuapp.com (logins: test@example.com/password, test2@example.com/password)

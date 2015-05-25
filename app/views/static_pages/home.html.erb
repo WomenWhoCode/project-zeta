@@ -10,6 +10,7 @@
 
   <%= link_to "Sign in with Github", user_omniauth_authorize_path(:github) %>
 <% else %>
+  <h3>See our <%= link_to 'featured tutorials!', tutorials_path %></h3>
   <div id="tag_cloud">
     Tags!  Check out what we're posting:<br/>
     <% tag_cloud tag_counts_combined, ['tag-sm', 'tag-med', 'tag-lg'] do |tag, css_class| %>
